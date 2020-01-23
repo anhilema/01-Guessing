@@ -11,15 +11,16 @@ while not quit:
     while number != random_number:
         number  = input("Please Guess a Number between 1 and {}: ".format (range))
         if not number.isdigit():
-            print('please guess a number')
+            print ("Guess a number please")
         else:
             number = int(number)
-            print('no, why did you think that?')
+            print('No, why did you think that?')
             if number > random_number:
-                print('Too high dumbass')
+                print('Too high fool')
             if number < random_number:
-                print('Too low dipshit')
+                print('Too low fool')
             count = count + 1
+            playsound('audio.mp3')
 
     print('woah, you actually got it')
     print('It only took you {} tries!'.format (count))

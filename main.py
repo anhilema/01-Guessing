@@ -20,8 +20,6 @@ while not quit:
             if number < random_number:
                 print('Too low fool')
             count = count + 1
-            playsound('audio.mp3')
-
     print('woah, you actually got it')
     print('It only took you {} tries!'.format (count))
     play_again = input('\nWana try again? (yes or no)')

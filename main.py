@@ -10,13 +10,13 @@ while not quit:
         if potato == 'e' or potato == 'E':
             range = 100
             cheese = True
-        if potato == 'm' or potato == 'M':
+        elif potato == 'm' or potato == 'M':
             range = 500
             cheese = True
-        if potato == 'h' or potato == 'H':
+        elif potato == 'h' or potato == 'H':
             range = 1000
             cheese = True
-        if potato == 'i' or potato == 'I':
+        elif potato == 'i' or potato == 'I':
             range = 1000000
             cheese = True
         else:
@@ -26,7 +26,7 @@ while not quit:
     count = 1
     number = -1
     while number != random_number:
-        number  = input("Please Guess a Number between 1 and {}: ".format (range))
+        number  = input("\nPlease Guess a Number between 1 and {}: ".format (range))
         if not number.isdigit():
             print ("Guess a number please")
         else:
@@ -37,11 +37,11 @@ while not quit:
             if number < random_number:
                 print('Too low fool')
             count = count + 1
-    print('woah, you actually got it')
+    print('Woah, you actually got it')
     print('It only took you {} tries!'.format (count))
-    play_again = input('\nWana try again? (yes or no)')
+    play_again = input('\nWanna try again? (Y or N)')
     play_again = play_again.lower()
-    if play_again == 'yee' or play_again == 'yes':
+    if play_again == 'y':
         quit = False
     else:
         quit = True
